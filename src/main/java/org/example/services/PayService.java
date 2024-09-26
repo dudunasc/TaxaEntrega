@@ -2,8 +2,8 @@ package org.example.services;
 
 public class PayService {
 
-    private TaxService taxService = new TaxService();
-    private DeliverService deliverService = new DeliverService();
+    private TaxService taxService;
+    private DeliverService deliverService;
 
     public PayService(TaxService taxService, DeliverService deliverService) {
         this.taxService = taxService;
@@ -28,7 +28,7 @@ public class PayService {
 
     public double finalPrice(double cost, String state){
 
-        return cost;
+        return cost + deliverService.fee(state) + taxService.tax(cost);
     }
 }
 
