@@ -6,6 +6,7 @@ public class DeliverService {
             return 10.0;
         } else{
             return 20.0;
+
         }
     }
 }

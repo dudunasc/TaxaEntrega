@@ -29,6 +29,7 @@ public class PayService {
     public double finalPrice(double cost, String state){
 
         return cost + deliverService.fee(state) + taxService.tax(cost);
+
     }
 }
 
